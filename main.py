@@ -229,7 +229,7 @@ if value_tab == "General":
 
             color = np.select(
                 [value <= -1, (value > -1) & (value <= -0.5), (value > -0.5) & (value <= 0.5), (value > 0.5) & (value <= 1), value > 1],
-                ["#d6e6f4", "#8fc2de", "#66abd4", "#3080bd", "#083e81"]).item()
+                ["#d6e6f4", "#8fc2de", "#66abd4", "#3080bd", "#083e81"]).astype(object).item()
 
             bar.set_color(color)
             bar.set_edgecolor("white")
