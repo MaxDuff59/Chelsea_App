@@ -276,7 +276,7 @@ if value_tab == "General":
 
                 color = np.select(
                     [value <= -1, (value > -1) & (value <= -0.5), (value > -0.5) & (value <= 0.5), (value > 0.5) & (value <= 1), value > 1],
-                ["#d6e6f4", "#8fc2de", "#66abd4", "#3080bd", "#083e81"]).item()
+                ["#d6e6f4", "#8fc2de", "#66abd4", "#3080bd", "#083e81"],default="#000000").item()
 
                 bar.set_color(color)
                 bar.set_edgecolor("white")
@@ -294,7 +294,7 @@ if value_tab == "General":
 
                 color = np.select(
                     [value <= -1, (value > -1) & (value <= -0.5), (value > -0.5) & (value <= 0.5), (value > 0.5) & (value <= 1), value > 1],
-                ["#d6e6f4", "#8fc2de", "#66abd4", "#3080bd", "#083e81"]).item()
+                ["#d6e6f4", "#8fc2de", "#66abd4", "#3080bd", "#083e81"],default="#000000").item()
 
                 bar.set_color(color)
                 bar.set_edgecolor("white")
@@ -310,7 +310,7 @@ if value_tab == "General":
 
                 color = np.select(
                     [value <= -1, (value > -1) & (value <= -0.5), (value > -0.5) & (value <= 0.5), (value > 0.5) & (value <= 1), value > 1],
-                ["#d6e6f4", "#8fc2de", "#66abd4", "#3080bd", "#083e81"]).item()
+                ["#d6e6f4", "#8fc2de", "#66abd4", "#3080bd", "#083e81"],default="#000000").item()
 
                 bar.set_color(color)
                 bar.set_edgecolor("white")
@@ -450,7 +450,7 @@ if value_tab == "General":
 
             color = np.select(
                 [value <= -1, (value > -1) & (value <= -0.5), (value > -0.5) & (value <= 0.5), (value > 0.5) & (value <= 1), value > 1],
-                ["#d6e6f4", "#8fc2de", "#66abd4", "#3080bd", "#083e81"]).item()
+                ["#d6e6f4", "#8fc2de", "#66abd4", "#3080bd", "#083e81"],default="#000000").item()
 
             bar.set_color(color)
             bar.set_edgecolor("white")
@@ -744,7 +744,7 @@ if value_tab == "Training Session":
                 
                 count_target = check_targets(df_gps_date)
                 color_target = np.select([count_target == 1,count_target == 2,count_target == 3,count_target == 4,count_target == 5],
-                                        ["#d6e6f4", "#8fc2de", "#66abd4", "#3080bd", "#083e81"])
+                                        ["#d6e6f4", "#8fc2de", "#66abd4", "#3080bd", "#083e81"],default="#000000")
                 
                 comment = df_predicted_hr_date['comment_session'][0]
 
