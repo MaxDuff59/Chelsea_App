@@ -185,10 +185,6 @@ if value_tab == "General":
     df_physical_last = df_physical.drop_duplicates(subset=['expression','movement','quality'],keep='last').reset_index(drop=True)
     physical_overall = df_physical_last.groupby('expression')['benchmarkPct'].mean().to_frame().reset_index()
     isometric_overall, dynamic_overall = physical_overall[physical_overall['expression'] == "isometric"]['benchmarkPct'].iloc[0] * 100, physical_overall[physical_overall['expression'] == "dynamic"]['benchmarkPct'].iloc[0] * 100
-    color_iso = np.select([isometric_overall < 20, (isometric_overall >= 20) & (isometric_overall < 40), (isometric_overall >= 40) & (isometric_overall < 60),
-                           (isometric_overall >= 60) & (isometric_overall < 80),isometric_overall >= 80],["red","orange","yellow","green","darkseagreen"])
-    color_dyn = np.select([dynamic_overall < 20, (dynamic_overall >= 20) & (dynamic_overall < 40), (dynamic_overall >= 40) & (dynamic_overall < 60),
-                           (dynamic_overall >= 60) & (dynamic_overall < 80),dynamic_overall >= 80],["red","orange","yellow","green","darkseagreen"])
 
     top_priority = df_indiv_prio[df_indiv_prio['Priority'] == 1].reset_index(drop=True)
 
