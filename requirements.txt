@@ -1,2 +1,8 @@
 streamlit
 streamlit-shadcn-ui
+pandas
+altair
+matplotlib
+plotly
+numpy
+scikit-learn
