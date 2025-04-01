@@ -208,10 +208,10 @@ if value_tab == "General":
     with b.container(border=True,height=HEIGHT_CONTAINER):
 
         st.markdown("""<h6 align=center>Recovery Score</h6>""",unsafe_allow_html=True)
-        url_icon = np.select([last_recovery_score <= -1,(last_recovery_score > -1)&(last_recovery_score <= -0.5),(last_recovery_score > -0.5)&(last_recovery_score <= 0.5),
-                              (last_recovery_score > 0.5)&(last_recovery_score <= 1),last_recovery_score > 1],
-                              ["icons/very_low_score_blue.png","icons/low_score_blue.png","icons/middle_score_blue.png","icons/high_score_blue.png","icons/very_high_score_blue.png"])
-        
+        url_icon = np.select([last_recovery_score <= -1,(last_recovery_score > -1) & (last_recovery_score <= 0),(last_recovery_score > 0) & (last_recovery_score <= 0.5),(last_recovery_score > 0.5) & (last_recovery_score <= 0.75),(last_recovery_score > 0.75)],
+            ["icons/very_low_score_blue.png","icons/low_score_blue.png","icons/middle_score_blue.png","icons/good_score_blue.png","icons/excellent_score_blue.png"],default="icons/middle_score_blue.png"
+        ).astype(object)
+
         cols = st.columns([1.1,2,0.2])
         cols[1].image(str(url_icon), width=150)
 
