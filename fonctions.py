@@ -203,7 +203,7 @@ def check_targets(df_gps_date):
 
     return count
         
-def get_date_range(start_date):
+def get_date_range(start_date,SLIDING_WINDOW_SIZE):
     date_before = [start_date - datetime.timedelta(days=i) for i in range(1,SLIDING_WINDOW_SIZE//2)]
     date_after = [start_date + datetime.timedelta(days=i) for i in range(SLIDING_WINDOW_SIZE//2)]
     date_range = date_before + date_after
