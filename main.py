@@ -361,7 +361,7 @@ if value_tab == "General":
         fig, ax = plot_init((10, 6))
 
         img = mpimg.imread('icons/human_body_grey.png')
-        ax.imshow(img, extent=[0, 0.25, 0, 0.4])  
+        ax.imshow(img, extent=[0, 0.25, 0, 0.35])  
 
         ax.scatter([0.085], [0.08], color='#3080bd', s=500, edgecolor='black',linewidth=2)
         ax.scatter([0.045], [0.08], color='#083e81', s=500, edgecolor='black',linewidth=2)
