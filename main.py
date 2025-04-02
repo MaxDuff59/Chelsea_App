@@ -735,19 +735,21 @@ if value_tab == "Training Session":
 
                 if pd.notna(comment):
                     color_comment = "darkred" if comment == "Harder than expected" else "lightblue"
-                    if type_activity == "Training":
-                        st.markdown(f"""
-                            <div style='text-align:center;'>
-                                <span style='color:{color_target}; font-weight:600; font-size:14px;'>{count_target} targets achieved.</span><br>
-                                <span style='color:{color_comment}; font-weight:600; font-size:14px;'>(HR) {comment}</span>
-                            </div>
-                        """, unsafe_allow_html=True)
-                    else:
-                        st.markdown(f"""
-                            <div style='text-align:center;'>
-                                <span style='color:{color_comment}; font-weight:600; font-size:14px;'>(HR) {comment}</span>
-                            </div>
-                        """, unsafe_allow_html=True)
+                    comment_html = f"<span style='color:{color_comment}; font-weight:600; font-size:14px;'>(HR) {comment}</span>"
+                else:
+                    comment_html = ""
+
+                if type_activity == "Training":
+                    target_html = f"<span style='color:{color_target}; font-weight:600; font-size:14px;'>{count_target} targets achieved.</span><br>"
+                else:
+                    target_html = ""
+
+                st.markdown(f"""
+                    <div style='text-align:center;'>
+                        {target_html}
+                        {comment_html}
+                    </div>
+                """, unsafe_allow_html=True)
             
             time_columns = [col for col in df_gps_date.columns if col.startswith("hr_zone")]
 

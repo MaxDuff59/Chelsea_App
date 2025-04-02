@@ -133,8 +133,6 @@ def plot_barh_session(type_activity,target,df_gps_date,col,df_matchs,current_sea
         plt.barh([""],[df_gps_date[col][0]],height=0.2,color=color,edgecolor='black') 
 
         color_target = 'black' if df_gps_date[col][0] < target else 'gold'
-        print(col)
-        print(df_gps_date[col][0],target)
         plt.axvline(target,linewidth=50,zorder=3,color=color_target)
 
         plt.xlim(0,target * 1.2)
