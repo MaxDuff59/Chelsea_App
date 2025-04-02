@@ -164,7 +164,7 @@ if value_tab == "General":
                 if date <= today_date:
                     st.markdown(f"<br>",unsafe_allow_html=True)
                     duration_day = df_gps[df_gps['date'] == date].reset_index(drop=True)['day_duration'][0]
-                    PATH_ICON = "/Users/maxenceduffuler/Desktop/CHELSEA_PROJECT/CODE/STREAMLIT/icons/"
+                    PATH_ICON = "icons/"
                     url_icon = "https://cdn.pixabay.com/photo/2012/04/05/01/08/sleep-25528_1280.png" if duration_day == 0 else "https://img.freepik.com/vecteurs-premium/icone-du-logo-vectoriel-chronometre_414847-333.jpg"
                     st.markdown(f"""<div style="display: flex; justify-content: center; align-items: center;"><img src="{url_icon}" width="35px" style="border-radius: 50%;" /></div>""",unsafe_allow_html=True)
 
@@ -1208,7 +1208,7 @@ if value_tab == "Month Overview":
 
                             if peak_over90:
                                 
-                                png_over_90 = "/Users/maxenceduffuler/Desktop/CHELSEA_PROJECT/CODE/STREAMLIT/icons/peak_speed_over90.png"
+                                png_over_90 = "icons/peak_speed_over90.png"
 
                                 st.markdown(f"<div style='text-align: center; margin-top: 15px'><img src='data:image/png;base64,{base64.b64encode(open(png_over_90, 'rb').read()).decode()}' width='30'/></div>",unsafe_allow_html=True)
 

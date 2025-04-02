@@ -18,7 +18,7 @@ from config import CONFIG
 def plot_png(variable_value,icon,width=30):
 
     png_scaler = np.select([variable_value < -1.5,variable_value < -0.5,variable_value < 0.5, variable_value < 1.5],["very_low","low",'middle',"high"],default='very_high')
-    png_scaler = f"/Users/maxenceduffuler/Desktop/CHELSEA_PROJECT/CODE/STREAMLIT/icons/{png_scaler}_{icon}.png"
+    png_scaler = f"icons/{png_scaler}_{icon}.png"
 
     # try:
     #     st.markdown(f"<div style='text-align: center; margin-top: 15px'><img src='data:image/png;base64,{base64.b64encode(open(png_scaler, 'rb').read()).decode()}' width='{width}'/></div>",unsafe_allow_html=True)
