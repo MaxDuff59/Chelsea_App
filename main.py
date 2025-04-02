@@ -110,24 +110,24 @@ if value_tab == "General":
     with col1:
         pass_br(3)
         if st.button("⬅ Previous"):
-            move_dates("previous")
+            move_dates("previous",today_date)
         if st.button("⬅ Previous 10 days"):
-            move_dates("previous",10)
+            move_dates("previous",today_date,10)
 
     with col2:
         col2_cols = st.columns([4,1.8,4])
         with col2_cols[1]:
             if st.button("📆 Today"):
-                move_dates("today")
+                move_dates("today",today_date)
         
     with col3:
         pass_br(3)
         if st.button("Next ➡"):
-            move_dates("next")
+            move_dates("next",today_date)
         if st.button("Next 10 days ➡"):
-            move_dates("next",10)
+            move_dates("next",today_date,10)
 
-    date_range = get_date_range(st.session_state.start_date)
+    date_range = get_date_range(st.session_state.start_date,SLIDING_WINDOW_SIZE)
 
     col_list = col2.columns(12)
 
