@@ -1210,7 +1210,7 @@ if value_tab == "Month Overview":
                                 
                                 png_over_90 = "icons/peak_speed_over90.png"
 
-                                st.markdown(f"<div style='text-align: center; margin-top: 15px'><img src='data:image/png;base64,{base64.b64encode(open(png_over_90, 'rb').read()).decode()}' width='30'/></div>",unsafe_allow_html=True)
+                                st.markdown(f"<div style='text-align: center; margin-top: 15px'><img src='data:image/png;base64,{base64.b64encode(open(png_over_90, 'rb').read()).decode()}' width='20'/></div>",unsafe_allow_html=True)
 
             i_cols = i_cols + 1 if i_cols < 7 else 0
 
