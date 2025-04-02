@@ -328,7 +328,10 @@ if value_tab == "General":
         st.markdown("""<h6 align=center>Coach's Note</h6>""",unsafe_allow_html=True)
 
         cols = st.columns([2,4])
-        cols[0].image("images/Enzo_maresca.png", width=150)
+        try:
+            cols[0].image("images/Enzo_maresca.png", width=150)
+        except:
+            pass
 
         cols[1].markdown(
             """
