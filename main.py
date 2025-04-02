@@ -186,7 +186,6 @@ if value_tab == "General":
         st.markdown(f"<br>",unsafe_allow_html=True)
         st.markdown(f"""<p style="font-size:16px; margin-left:10px; text-align:center">This season :</p>""",unsafe_allow_html=True)
         st.markdown(f"""<p style="font-size:16px; margin-left:10px; margin-top:-10px; text-align:center"><b>{len(df_matchs_current_season)}</b> games played - <b>{round(df_matchs_current_season['day_duration'].sum())}</b> minutes played</p>""",unsafe_allow_html=True)
-
     with b.container(border=True,height=HEIGHT_CONTAINER):
 
         st.markdown("""<h6 align=center>Recovery Score</h6>""",unsafe_allow_html=True)
@@ -226,7 +225,6 @@ if value_tab == "General":
         plt.xticks(df_recovery_7_last_days['sessionDate'],[date.strftime('%d %b') for date in df_recovery_7_last_days['sessionDate']],fontsize=25);
     
         st.pyplot(fig)
-
     with c.container(border=True,height=HEIGHT_CONTAINER):
 
         st.markdown("""<h6 align=center>RPE Sessions</h6>""",unsafe_allow_html=True)
@@ -304,7 +302,6 @@ if value_tab == "General":
         plt.xticks(df_recovery_7_last_days['sessionDate'],[date.strftime('%d %b') for date in df_recovery_7_last_days['sessionDate']],fontsize=25);        
         
         st.pyplot(fig)
-
     with d.container(border=True,height=HEIGHT_CONTAINER):
 
         st.markdown("""<h6 align=center>Coach's Note</h6>""",unsafe_allow_html=True)
@@ -329,8 +326,6 @@ if value_tab == "General":
                 The <span style="font-weight:bold; color:#8fc2de;">next game against Arsenal</span> will be the opportunity for you to 
                 <span style="font-weight:bold; color:#8fc2de;">start</span> (and score of course) ⚽️🔵
             </div>""",unsafe_allow_html=True)
-
-    #pass_br(1)
 
     a, b, c, d = st.columns(4) 
     
@@ -359,7 +354,7 @@ if value_tab == "General":
 
             st.pyplot(fig)
 
-    with b.expander("Player Weight",expanded=True):
+    with b.expander("Player Weight",expanded=False):
 
         OPTIMAL_WEIGHT = 90.0
 
@@ -401,7 +396,7 @@ if value_tab == "General":
         st.markdown(f"""
         <p style="text-align:center; font-size: 14px; margin-top: 10px">Optimal weight: {OPTIMAL_WEIGHT} kg</p>""", unsafe_allow_html=True)
 
-    with c.expander("Physical Capability Score",expanded=True):
+    with c.expander("Physical Capability Score",expanded=False):
 
         st.markdown("""<h6 align=center>Physical Capability Score</h6>""",unsafe_allow_html=True)
         st.markdown("<br>",unsafe_allow_html=True)
@@ -417,7 +412,7 @@ if value_tab == "General":
 
         pass_br(3)
 
-    with d.expander("Top Priority Areas",expanded=True):
+    with d.expander("Top Priority Areas",expanded=False):
 
         st.markdown("""<h6 align=center>Top Priority Areas</h6>""",unsafe_allow_html=True)
         cols = st.columns([2,4])
@@ -577,7 +572,6 @@ if value_tab == "GPS Data":
                 },
             },
         )
-
     with b.expander("Distance over 21",expanded=True):
 
         st.markdown("<h6 align=center>Distance over 21 km/h</h6>",unsafe_allow_html=True)
@@ -667,7 +661,6 @@ if value_tab == "GPS Data":
                 },
             },
         )
-
     with b.expander("Maximal Speed",expanded=False):
 
         st.markdown("<h6 align=center>Maximal Speed</h6>",unsafe_allow_html=True)

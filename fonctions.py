@@ -209,7 +209,7 @@ def get_date_range(start_date,SLIDING_WINDOW_SIZE):
     date_range = date_before + date_after
     return sorted(date_range)
 
-def move_dates(direction,days_diff=1):
+def move_dates(direction,today_date,days_diff=1):
     if direction == "previous":
         st.session_state.start_date -= datetime.timedelta(days=days_diff)
     elif direction == "next":
