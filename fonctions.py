@@ -20,10 +20,8 @@ def plot_png(variable_value,icon,width=30):
     png_scaler = np.select([variable_value < -1.5,variable_value < -0.5,variable_value < 0.5, variable_value < 1.5],["very_low","low",'middle',"high"],default='very_high')
     png_scaler = f"icons/{png_scaler}_{icon}.png"
 
-    # try:
-    #     st.markdown(f"<div style='text-align: center; margin-top: 15px'><img src='data:image/png;base64,{base64.b64encode(open(png_scaler, 'rb').read()).decode()}' width='{width}'/></div>",unsafe_allow_html=True)
-    # except:
-    st.image(png_scaler,width=30)
+    st.markdown(f"<div style='text-align: center; margin-top: 15px'><img src='data:image/png;base64,{base64.b64encode(open(png_scaler, 'rb').read()).decode()}' width='{width}'/></div>",unsafe_allow_html=True)
+    # st.image(png_scaler,width=30)
 
 def month_overview_cells(col,text,df_gps_current_month,df_gps_previous_month,previous_month_value_name):
 
