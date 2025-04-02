@@ -339,7 +339,7 @@ if value_tab == "General":
 
         cols[1].markdown(
             """
-            <div style="text-align: justify; font-size: 15px; margin-top: 20px;">
+            <div style="text-align: justify; font-size: 14px; margin-top: 10px;">
                 Hey Hernan,<br>
                 You <span style="font-weight:bold; color:#8fc2de;">played a lot</span> these last few weeks, that is why 
                 <span style="font-weight:bold; color:#8fc2de;">I managed your play time</span> yesterday.<br>
@@ -348,10 +348,11 @@ if value_tab == "General":
                 <span style="font-weight:bold; color:#8fc2de;">start</span> (and score of course) ⚽️🔵
             </div>""",unsafe_allow_html=True)
 
+    #pass_br(1)
 
     a, b, c, d = st.columns(4) 
     
-    HEIGHT_CONTAINER = 360
+    HEIGHT_CONTAINER = 380
 
     with a.container(border=True, height=HEIGHT_CONTAINER):
 
@@ -376,7 +377,7 @@ if value_tab == "General":
 
             st.pyplot(fig)
 
-    with b.container(border=True,height=HEIGHT_CONTAINER):
+    with b.expander("Player Weight",expanded=True):
 
         OPTIMAL_WEIGHT = 90.0
 
@@ -418,7 +419,7 @@ if value_tab == "General":
         st.markdown(f"""
         <p style="text-align:center; font-size: 14px; margin-top: 10px">Optimal weight: {OPTIMAL_WEIGHT} kg</p>""", unsafe_allow_html=True)
 
-    with c.container(border=True,height=360):
+    with c.expander("Physical Capability Score",expanded=True):
 
         st.markdown("""<h6 align=center>Physical Capability Score</h6>""",unsafe_allow_html=True)
         st.markdown("<br>",unsafe_allow_html=True)
@@ -432,7 +433,9 @@ if value_tab == "General":
         st.markdown(f"""<p style="display: flex; justify-content: center;font-size: 15px;">Most Recent Test: {' '.join(df_physical_last.sort_values('testDate')[['expression','movement']].iloc[0].values)} ({df_physical_last.sort_values('testDate')['testDate'].iloc[0].strftime('%d %b')})</p>""",unsafe_allow_html=True)
         st.markdown(f"""<p style="display: flex; justify-content: center;font-size: 15px;">Most Outdated Test: {' '.join(df_physical_last.sort_values('testDate',ascending=False)[['expression','movement']].iloc[0].values)} ({df_physical_last.sort_values('testDate',ascending=False)['testDate'].iloc[0].strftime('%d %b')})</p>""",unsafe_allow_html=True)
 
-    with d.container(border=True,height=HEIGHT_CONTAINER):
+        pass_br(3)
+
+    with d.expander("Top Priority Areas",expanded=True):
 
         st.markdown("""<h6 align=center>Top Priority Areas</h6>""",unsafe_allow_html=True)
         cols = st.columns([2,4])
