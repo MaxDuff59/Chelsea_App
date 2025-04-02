@@ -1160,7 +1160,7 @@ if value_tab == "Month Overview":
                     emoji = ("🏆" if df_current_date['day_duration'][0] > 0 and not pd.isna(df_current_date['opposition_full'][0]) else "⚽️" if df_current_date['day_duration'][0] > 0 else "")
                     color = "royalblue" if pd.to_datetime(current_date) == pd.to_datetime(today_date) else "lightgrey"
                     st.markdown(
-                        f"<span style='color:{color}; font-size:10px'>{current_date.strftime('%d %b')}"
+                        f"<span style='color:{color}; font-size:12px'>{current_date.strftime('%d %b')}"
                         f"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
                         f"<span style='font-size:9px'>{emoji}</span></span>",
                         unsafe_allow_html=True
