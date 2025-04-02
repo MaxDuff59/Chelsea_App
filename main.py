@@ -1271,13 +1271,13 @@ if value_tab == "Month Overview":
         with st.expander("Legend:",expanded=False):
             #st.markdown("<p style='margin-left:20px;'><u>Legend:</u></p>",unsafe_allow_html=True)
 
-            st.markdown("<p style='font-size:14px; margin-left:20px;'>⚽️ Training</p>",unsafe_allow_html=True)
-            st.markdown("<p style='font-size:14px; margin-left:20px;'>🏆 Game</p>",unsafe_allow_html=True)
-            st.markdown("<p style='margin-left:20px;'>""<span style='font-size:20px; color:#d6e6f4;'>◉</span> ""<span style='font-size:14px; color:white;'>Very Lower than Player Average</span>""</p>",unsafe_allow_html=True)
-            st.markdown("<p style='margin-left:20px;'>""<span style='font-size:20px; color:#8fc2de;'>◉</span> ""<span style='font-size:14px; color:white;'>Lower than Player Average</span>""</p>",unsafe_allow_html=True)
-            st.markdown("<p style='margin-left:20px;'>""<span style='font-size:20px; color:#66abd4;'>◉</span> ""<span style='font-size:14px; color:white;'>Around Player Average</span>""</p>",unsafe_allow_html=True)
-            st.markdown("<p style='margin-left:20px;'>""<span style='font-size:20px; color:#3080bd;'>◉</span> ""<span style='font-size:14px; color:white;'>Higher than Player Average</span>""</p>",unsafe_allow_html=True)
-            st.markdown("<p style='margin-left:20px;'>""<span style='font-size:20px; color:#083e81;'>◉</span> ""<span style='font-size:14px; color:white;'>Very Higher than Player Average</span>""</p>",unsafe_allow_html=True)
+            st.markdown("<p style='font-size:12px; margin-left:20px;'>⚽️ Training</p>",unsafe_allow_html=True)
+            st.markdown("<p style='font-size:12px; margin-left:20px;'>🏆 Game</p>",unsafe_allow_html=True)
+            st.markdown("<p style='margin-left:20px;'>""<span style='font-size:20px; color:#d6e6f4;'>◉ </span> ""<span style='font-size:12px; color:white;'>Very Lower than Player Average</span>""</p>",unsafe_allow_html=True)
+            st.markdown("<p style='margin-left:20px;'>""<span style='font-size:20px; color:#8fc2de;'>◉ </span> ""<span style='font-size:12px; color:white;'>Lower than Player Average</span>""</p>",unsafe_allow_html=True)
+            st.markdown("<p style='margin-left:20px;'>""<span style='font-size:20px; color:#66abd4;'>◉ </span> ""<span style='font-size:12px; color:white;'>Around Player Average</span>""</p>",unsafe_allow_html=True)
+            st.markdown("<p style='margin-left:20px;'>""<span style='font-size:20px; color:#3080bd;'>◉ </span> ""<span style='font-size:12px; color:white;'>Higher than Player Average</span>""</p>",unsafe_allow_html=True)
+            st.markdown("<p style='margin-left:20px;'>""<span style='font-size:20px; color:#083e81;'>◉ </span> ""<span style='font-size:12px; color:white;'>Very Higher than Player Average</span>""</p>",unsafe_allow_html=True)
 
 
         
