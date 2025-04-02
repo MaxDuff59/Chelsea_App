@@ -331,7 +331,11 @@ if value_tab == "General":
         try:
             cols[0].image("images/Enzo_maresca.png", width=150)
         except:
-            pass
+            try:
+                cols[0].image("icons/enzo_maresca_2.webp", width=150)
+            except:
+                pass
+
 
         cols[1].markdown(
             """
