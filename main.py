@@ -735,12 +735,19 @@ if value_tab == "Training Session":
 
                 if pd.notna(comment):
                     color_comment = "darkred" if comment == "Harder than expected" else "lightblue"
-                    st.markdown(f"""
-                        <div style='text-align:center;'>
-                            <span style='color:{color_target}; font-weight:600; font-size:14px;'>{count_target} targets achieved.</span><br>
-                            <span style='color:{color_comment}; font-weight:600; font-size:14px;'>(HR) {comment}</span>
-                        </div>
-                    """, unsafe_allow_html=True)
+                    if type_activity == "Training":
+                        st.markdown(f"""
+                            <div style='text-align:center;'>
+                                <span style='color:{color_target}; font-weight:600; font-size:14px;'>{count_target} targets achieved.</span><br>
+                                <span style='color:{color_comment}; font-weight:600; font-size:14px;'>(HR) {comment}</span>
+                            </div>
+                        """, unsafe_allow_html=True)
+                    else:
+                        st.markdown(f"""
+                            <div style='text-align:center;'>
+                                <span style='color:{color_comment}; font-weight:600; font-size:14px;'>(HR) {comment}</span>
+                            </div>
+                        """, unsafe_allow_html=True)
                 else:
                     st.markdown(f"""
                         <div style='text-align:center;'>
