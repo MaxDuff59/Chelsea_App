@@ -748,8 +748,6 @@ if value_tab == "Training Session":
                                 <span style='color:{color_comment}; font-weight:600; font-size:14px;'>(HR) {comment}</span>
                             </div>
                         """, unsafe_allow_html=True)
-                else:
-                    pass
             
             time_columns = [col for col in df_gps_date.columns if col.startswith("hr_zone")]
 
