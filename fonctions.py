@@ -203,6 +203,19 @@ def check_targets(df_gps_date):
 
     return count
         
+def get_date_range(start_date):
+    date_before = [start_date - datetime.timedelta(days=i) for i in range(1,SLIDING_WINDOW_SIZE//2)]
+    date_after = [start_date + datetime.timedelta(days=i) for i in range(SLIDING_WINDOW_SIZE//2)]
+    date_range = date_before + date_after
+    return sorted(date_range)
+
+def move_dates(direction,days_diff=1):
+    if direction == "previous":
+        st.session_state.start_date -= datetime.timedelta(days=days_diff)
+    elif direction == "next":
+        st.session_state.start_date += datetime.timedelta(days=days_diff)
+    elif direction == "today":
+        st.session_state.start_date = today_date
 
 
 

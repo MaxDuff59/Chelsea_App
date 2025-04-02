@@ -103,43 +103,25 @@ if value_tab == "General":
 
     SLIDING_WINDOW_SIZE = 12
 
-    def get_date_range(start_date):
-        date_before = [start_date - datetime.timedelta(days=i) for i in range(1,SLIDING_WINDOW_SIZE//2)]
-        date_after = [start_date + datetime.timedelta(days=i) for i in range(SLIDING_WINDOW_SIZE//2)]
-        date_range = date_before + date_after
-        return sorted(date_range)
-
-    def move_dates(direction,days_diff=1):
-        if direction == "previous":
-            st.session_state.start_date -= datetime.timedelta(days=days_diff)
-        elif direction == "next":
-            st.session_state.start_date += datetime.timedelta(days=days_diff)
-        elif direction == "today":
-            st.session_state.start_date = today_date
-
     # st.markdown("<h6 align=center><u>Calendar:<u></h6>",unsafe_allow_html=True)
 
     col1, col2, col3 = st.columns([1, 5, 0.5])
 
     with col1:
-        st.markdown("<br>",unsafe_allow_html=True)
-        st.markdown("<br>",unsafe_allow_html=True)
-        st.markdown("<br>",unsafe_allow_html=True)
+        pass_br(3)
         if st.button("⬅ Previous"):
             move_dates("previous")
         if st.button("⬅ Previous 10 days"):
             move_dates("previous",10)
 
     with col2:
-        col2_cols = st.columns([4.1,2,4])
+        col2_cols = st.columns([4,2,4])
         with col2_cols[1]:
             if st.button("📆 Today"):
                 move_dates("today")
         
     with col3:
-        st.markdown("<br>",unsafe_allow_html=True)
-        st.markdown("<br>",unsafe_allow_html=True)
-        st.markdown("<br>",unsafe_allow_html=True)
+        pass_br(3)
         if st.button("Next ➡"):
             move_dates("next")
         if st.button("Next 10 days ➡"):
