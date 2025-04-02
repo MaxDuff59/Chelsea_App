@@ -865,7 +865,7 @@ if value_tab == "Training Session":
                     target = df_gps_date['target_distance'][0]
                     st.markdown(f"""<div style="display: flex; justify-content: center;"><p style="font-size: 12px; color:lightgrey">Target: {target} m</p></div>""", unsafe_allow_html=True)
                 else:
-                    st.markdown(f"""<div style="display: flex; justify-content: center;"><p style="font-size: 12px; color:lightgrey">Moyenne Match: x m</p></div>""", unsafe_allow_html=True)
+                    st.markdown(f"""<div style="display: flex; justify-content: center;"><p style="font-size: 12px; color:lightgrey">Moyenne Match: 5000 m</p></div>""", unsafe_allow_html=True)
                     target = None
 
                 st.markdown("<br>",unsafe_allow_html=True)
@@ -897,7 +897,7 @@ if value_tab == "Training Session":
                     target = df_gps_date['target_distance_over_21'][0]
                     st.markdown(f"""<div style="display: flex; justify-content: center;"><p style="font-size: 12px; color:lightgrey">Target: {target} m</p></div>""", unsafe_allow_html=True)
                 else:
-                    st.markdown(f"""<div style="display: flex; justify-content: center;"><p style="font-size: 12px; color:lightgrey">Moyenne Match: x m</p></div>""", unsafe_allow_html=True)
+                    st.markdown(f"""<div style="display: flex; justify-content: center;"><p style="font-size: 12px; color:lightgrey">Moyenne Match: 250 m</p></div>""", unsafe_allow_html=True)
                     target = None
 
                 st.markdown("<br>",unsafe_allow_html=True)
@@ -929,7 +929,7 @@ if value_tab == "Training Session":
                     target = df_gps_date['target_distance_over_27'][0]
                     st.markdown(f"""<div style="display: flex; justify-content: center;"><p style="font-size: 12px; color:lightgrey">Target: {target} m</p></div>""", unsafe_allow_html=True)
                 else:
-                    st.markdown(f"""<div style="display: flex; justify-content: center;"><p style="font-size: 12px; color:lightgrey">Moyenne Match: x m</p></div>""", unsafe_allow_html=True)
+                    st.markdown(f"""<div style="display: flex; justify-content: center;"><p style="font-size: 12px; color:lightgrey">Moyenne Match: 30 m</p></div>""", unsafe_allow_html=True)
 
                 st.markdown("<br>",unsafe_allow_html=True)
 
@@ -958,9 +958,9 @@ if value_tab == "Training Session":
                 st.markdown(f"""<div style="display: flex; justify-content: center;"><p style="font-size: 40px; color:lightgrey">{round(df_gps_date['accel_decel_over_3_5'][0],1)} m</p></div>""", unsafe_allow_html=True)
                 if type_activity == "Training":
                     target = df_gps_date['target_accel_decel_over_3_5'][0]
-                    st.markdown(f"""<div style="display: flex; justify-content: center;"><p style="font-size: 12px; color:lightgrey">Target: {target} m</p></div>""", unsafe_allow_html=True)
+                    st.markdown(f"""<div style="display: flex; justify-content: center;"><p style="font-size: 12px; color:lightgrey">Target: {target} s</p></div>""", unsafe_allow_html=True)
                 else:
-                    st.markdown(f"""<div style="display: flex; justify-content: center;"><p style="font-size: 12px; color:lightgrey">Moyenne Match: x m</p></div>""", unsafe_allow_html=True)
+                    st.markdown(f"""<div style="display: flex; justify-content: center;"><p style="font-size: 12px; color:lightgrey">Moyenne Match: 40 s</p></div>""", unsafe_allow_html=True)
 
                 st.markdown("<br>",unsafe_allow_html=True)
 
@@ -991,7 +991,7 @@ if value_tab == "Training Session":
                     target = df_gps_date['target_peak_speed'][0]
                     st.markdown(f"""<div style="display: flex; justify-content: center;"><p style="font-size: 12px; color:lightgrey">Target: {target} km/h</p></div>""", unsafe_allow_html=True)
                 else:
-                    st.markdown(f"""<div style="display: flex; justify-content: center;"><p style="font-size: 12px; color:lightgrey">Moyenne Match: x km/h</p></div>""", unsafe_allow_html=True)
+                    st.markdown(f"""<div style="display: flex; justify-content: center;"><p style="font-size: 12px; color:lightgrey">Moyenne Match:29.6 km/h</p></div>""", unsafe_allow_html=True)
 
                 st.markdown("<br>",unsafe_allow_html=True)
 
