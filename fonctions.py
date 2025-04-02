@@ -15,7 +15,7 @@ import base64
 
 from config import CONFIG
 
-def plot_png(variable_value,icon,width=30):
+def plot_png(variable_value,icon,width=25):
 
     png_scaler = np.select([variable_value < -1.5,variable_value < -0.5,variable_value < 0.5, variable_value < 1.5],["very_low","low",'middle',"high"],default='very_high')
     png_scaler = f"icons/{png_scaler}_{icon}.png"

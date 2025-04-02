@@ -1194,13 +1194,13 @@ if value_tab == "Month Overview":
                             
                             distance_scaler_value = df_current_date_gps_scaler['distance'][0]
 
-                            plot_png(distance_scaler_value,"distance",width=30)
+                            plot_png(distance_scaler_value,"distance")
 
                         if toggle_distance_high_speed:
 
                             high_speed_scaler_value = df_current_date_gps_scaler['distance_over_21'][0]
 
-                            plot_png(high_speed_scaler_value,"high-speed",width=30)
+                            plot_png(high_speed_scaler_value,"high-speed")
 
                         if toggle_distance_peak_over90:
 
