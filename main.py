@@ -115,7 +115,7 @@ if value_tab == "General":
             move_dates("previous",10)
 
     with col2:
-        col2_cols = st.columns([4,2,4])
+        col2_cols = st.columns([4,1.8,4])
         with col2_cols[1]:
             if st.button("📆 Today"):
                 move_dates("today")
