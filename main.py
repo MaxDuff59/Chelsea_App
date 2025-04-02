@@ -749,11 +749,7 @@ if value_tab == "Training Session":
                             </div>
                         """, unsafe_allow_html=True)
                 else:
-                    st.markdown(f"""
-                        <div style='text-align:center;'>
-                            <span style='color:white; font-weight:600; font-size:14px;'>{count_target} targets achieved.</span>
-                        </div>
-                    """, unsafe_allow_html=True)
+                    pass
             
             time_columns = [col for col in df_gps_date.columns if col.startswith("hr_zone")]
 
